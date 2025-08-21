@@ -1,4 +1,5 @@
 # ScamGuardSecurities 
+Inspiration: https://chill-robe-04f.notion.site/A-Walk-by-the-Park-2313f537d22480fea586fb48e7c49b04?pvs=74
 https://g.co/gemini/share/ffff3349c83e
 ScamGuard in Securities Markets
 ScamGuard is an innovative, AI-driven platform designed to combat fraud in India's securities markets, focusing on the Fraud track of the Securities Market Hackathon. It serves as a comprehensive shield for retail investors by proactively detecting, preventing, and educating against common scams such as pump-and-dump schemes, Ponzi operations, unregistered investment advisories, social media impersonations, and phishing attacks. By leveraging real-time data from social media, trading platforms, and investor reports, ScamGuard analyzes patterns to flag suspicious activities, alerts regulators like SEBI, and empowers users with verifiable tools for safe investing. Integrated with Digital Public Infrastructure (DPI) like Aadhaar for identity verification, it aims to reduce the staggering losses from investment frauds—projected at INR 20,000 crore in 2025 alone—while fostering a more transparent and accessible market ecosystem.
