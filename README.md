@@ -1,4 +1,5 @@
 # ScamGuardSecurities 
+https://poe.com/ScamGuardSecurities
 Inspiration: https://chill-robe-04f.notion.site/A-Walk-by-the-Park-2313f537d22480fea586fb48e7c49b04?pvs=74
 https://g.co/gemini/share/ffff3349c83e
 ScamGuard in Securities Markets
