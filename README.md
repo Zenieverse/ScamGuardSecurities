@@ -3,6 +3,52 @@ https://poe.com/ScamGuardSecurities
 https://vimeo.com/1116495150?share=copy
 Inspiration: https://chill-robe-04f.notion.site/A-Walk-by-the-Park-2313f537d22480fea586fb48e7c49b04?pvs=74
 https://g.co/gemini/share/ffff3349c83e
+A decentralized investor protection toolkit for scam detection, compliance monitoring, and risk transparency in Web3.
+🚀 Features
+Risk Scoring Engine: Detects suspicious wallets, contracts, and domains.
+AI-Powered Analysis (optional): Integrates GPT OSS models for scam text analysis.
+Community Reporting: Crowdsourced flags and reports.
+Dashboard: Investor-facing UI for scam alerts and risk scores.
+📦 Installation
+Clone the repository:
+git clone https://github.com/Zenieverse/ScamGuardSecurities.git
+cd ScamGuardSecurities
+Install dependencies (Python backend):
+pip install -r requirements.txt
+Run backend service:
+uvicorn backend.main:app --reload
+Run frontend (Vue/React, depending on implementation):
+npm install
+npm run serve
+🧪 Testing Instructions
+Backend API Tests
+Run unit tests:
+pytest tests/
+Example request to risk scoring API:
+curl -X POST http://localhost:8000/score \
+  -H "Content-Type: application/json" \
+  -d '{"project_text": "Guaranteed 1000% returns in 7 days, no compliance"}'
+Example response:
+{
+  "risk_score": 0.92,
+  "flags": ["Unrealistic returns", "Compliance missing"]
+}
+Frontend Tests
+Start frontend server: npm run serve
+Open http://localhost:8080
+Paste a sample project description into the analysis tool.
+📊 Sample Data
+You can test ScamGuardSecurities with the following examples:
+High-Risk Project
+Invest now for 2000% guaranteed profits. Anonymous team. No audits.
+→ Expected: High risk score (>0.8).
+Medium-Risk Project
+We provide DeFi lending. Smart contract is unaudited. Team partially doxxed.
+→ Expected: Medium risk score (~0.5–0.7).
+Low-Risk Project
+Registered entity with KYC/AML compliance. Smart contract audited. Transparent team.
+→ Expected: Low risk score (<0.3).
+
 Usage of GPT OSS 20mb in ScamGuardSecurities
 1. Purpose of GPT OSS 20mb in the App
 Text Pre-Screening → Scan short token descriptions, Telegram posts, tweets, or websites for scam-like wording.
