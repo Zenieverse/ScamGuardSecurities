@@ -3,6 +3,34 @@ https://poe.com/ScamGuardSecurities
 https://vimeo.com/1116495150?share=copy
 Inspiration: https://chill-robe-04f.notion.site/A-Walk-by-the-Park-2313f537d22480fea586fb48e7c49b04?pvs=74
 https://g.co/gemini/share/ffff3349c83e
+Usage of GPT OSS 20mb in ScamGuardSecurities
+1. Purpose of GPT OSS 20mb in the App
+Text Pre-Screening → Scan short token descriptions, Telegram posts, tweets, or websites for scam-like wording.
+Lightweight AI Assistant → Provide investors with quick scam insights without requiring heavy compute (can run on CPU).
+On-the-fly Risk Signals → Used in real-time during project browsing without slowing down the app.
+2. Where It Fits in the Pipeline
+Backend (ai_service.py) → Hosts GPT OSS 20mb inference.
+Risk Scoring (risk_score.py) → Calls GPT OSS 20mb to analyze project text and add a small AI-based score to overall scam probability.
+Frontend Dashboard → Investors click “Quick AI Check (GPT OSS 20mb)” to instantly get a scam summary.
+3. Example Workflow in the App
+User Action → Investor pastes a project link / token description.
+App Extraction → Text metadata is extracted (website description, whitepaper snippet).
+AI Service → The extracted text is sent to /ai/analyze-text (GPT OSS 20mb).
+GPT Output → Returns JSON like:
+{
+  "summary": "The project makes unrealistic profit claims and lacks regulatory details.",
+  "risk_score": 0.78,
+  "red_flags": ["Unrealistic ROI promises", "No compliance information"]
+}
+information"]
+}
+Risk Dashboard → Shows summary + confidence score + list of red flags.
+5. Why GPT OSS 20mb?
+Lightweight: Runs on CPUs or small GPUs → perfect for MVP.
+Fast: Can process text instantly → ideal for user-facing dashboards.
+Low Cost: Cheaper to run than GPT OSS 20b/120b → good for pilot deployments.
+Scalable: Can later upgrade to GPT OSS 20b/120b for more complex analysis.
+
 ScamGuard in Securities Markets
 ScamGuard is an innovative, AI-driven platform designed to combat fraud in securities markets, focusing on the Fraud track of the Securities Market. It serves as a comprehensive shield for retail investors by proactively detecting, preventing, and educating against common scams such as pump-and-dump schemes, Ponzi operations, unregistered investment advisories, social media impersonations, and phishing attacks. By leveraging real-time data from social media, trading platforms, and investor reports, ScamGuard analyzes patterns to flag suspicious activities, alerts regulators like SEBI, and empowers users with verifiable tools for safe investing. Integrated with Digital Public Infrastructure (DPI) like Aadhaar for identity verification, it aims to reduce the staggering losses from investment frauds—projected at INR 20,000 crore in 2025 alone—while fostering a more transparent and accessible market ecosystem.
 Market Impact of Product/Process
